@@ -1,0 +1,266 @@
+:root {
+  font-family: sans-serif;
+  color: #483c3b;
+  background: #efe4d6;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+.encabezado,
+.pie {
+  background: #483c3b;
+  text-align: center;
+}
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 48px 8% 96px;
+  color: #fff;
+  text-align: left;
+}
+.navegacion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.navegacion button {
+  padding: 10px 14px;
+  border: 1px solid #a99a8b;
+  border-radius: 2px;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+}
+.pie {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 24px 8%;
+  color: #e3d6c6;
+}
+.encabezado h1,
+.texto h2,
+.precios h2,
+.registro h2,
+.tarjeta h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+.encabezado h1,
+.pie p {
+  margin: 0;
+}
+.encabezado h1 {
+  font-size: clamp(35.2px, 6vw, 54.4px);
+  letter-spacing: 0.02em;
+}
+.encabezado p {
+  margin: 9.6px 0 0;
+  color: #e3d6c6;
+  font-size: 16.8px;
+}
+.pie p {
+  font-size: 14.4px;
+}
+.foto1 {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: min(calc(100% - 32px), 1400px);
+  margin: -64px auto 0;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.foto2 {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+.foto2 {
+  height: 320px;
+}
+.boton-registro {
+  justify-self: start;
+  padding: 12px 20px;
+  border: 0;
+  background: #483c3b;
+  color: #fff;
+  cursor: pointer;
+}
+main {
+  padding: 64px 4% 80px;
+}
+.contenido,
+.central {
+  display: grid;
+  gap: 72px;
+}
+.contenido {
+  width: min(100%, 1600px);
+  margin: 0 auto;
+}
+
+.parrafo-1,
+.parrafo-2,
+.parrafo-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 56px;
+}
+.texto h2,
+.precios h2,
+.registro h2 {
+  margin: 0 0 16px;
+  color: #483c3b;
+  font-size: clamp(25.6px, 3vw, 32px);
+  line-height: 1.2;
+}
+.texto h2 {
+  margin-bottom: 25.6px;
+}
+.contenido p {
+  max-width: 60ch;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17.6px;
+  line-height: 1.8;
+}
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+.imagenes-fila {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+.imagenes-fila img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.formulario {
+  width: 100%;
+  max-width: 480px;
+}
+.registro-contenido {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 32px;
+}
+.foto-registro {
+  display: block;
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+.tarjeta {
+  padding: 28.8px 25.6px;
+  border: 1px solid #d8c9b6;
+  background: #f7f0e6;
+}
+.tarjeta h3 {
+  margin: 0;
+  color: #483c3b;
+  font-size: 22.4px;
+}
+.duracion,
+.linea-precio,
+.campo label {
+  font-size: 15.2px;
+}
+.duracion {
+  display: block;
+  margin: 4.8px 0 22.4px;
+  color: #483c3b;
+}
+.linea-precio {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  gap: 16px;
+  padding: 14.4px 0;
+  border-top: 1px solid #d8c9b6;
+}
+.precio {
+  font-weight: 700;
+}
+.precios-intro {
+  margin-bottom: 35.2px;
+}
+.campo label {
+  display: block;
+  margin-bottom: 4px;
+  color: #483c3b;
+}
+.campo {
+  margin-bottom: 12px;
+}
+.campo input,
+.campo select {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cdbba5;
+  border-radius: 2px;
+  background: #fff;
+  color: #483c3b;
+  font: inherit;
+}
+@media (max-width: 800px) {
+  .encabezado {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 35.2px 6% 80px;
+    text-align: center;
+  }
+  .navegacion {
+    justify-content: center;
+  }
+  main {
+    padding: 48px 6% 64px;
+  }
+  .contenido,
+  .central {
+    gap: 56px;
+  }
+  .parrafo-1,
+  .parrafo-2,
+  .parrafo-3 {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .parrafo-1 .foto2,
+  .parrafo-3 .foto2 {
+    order: -1;
+  }
+  .foto2 {
+    height: 230px;
+  }
+  .imagenes-fila {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .registro-contenido {
+    grid-template-columns: 1fr;
+  }
+  .foto-registro {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+  .pie {
+    grid-template-columns: 1fr;
+  }
+}
